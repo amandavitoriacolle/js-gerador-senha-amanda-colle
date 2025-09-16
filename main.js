@@ -66,10 +66,10 @@ function geraSenha() {
 
 function classificaSenha() {
 
-    let entropia = tamanhoSenha*Math.Log2(tamanhoSenha);
+    let entropia = tamanhoSenha*Math.log2(tamanhoSenha);
 
     forcaSenha.classList.remove('fraca', 'media', 'forte');
-    if (entropia  > 57) {
+    if (entropia > 57) {
         forcaSenha.classList.add('forte');
     } else if (entropia > 35 && entropia < 57) {
         forcaSenha.classList.add('media');
@@ -82,5 +82,4 @@ function classificaSenha() {
     Math.floor(2**entropia/(100e6*60*60*24)) + " dias para descobrir essa senha.";
 
 }
-
 
